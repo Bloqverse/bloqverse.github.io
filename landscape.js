@@ -46,13 +46,11 @@ function fit(canvas, parent, scale) {
       canvas.height = height * resize.scale
     }
       
-      /*
     var head = document.getElementById('header');
       console.log('head.height', head.clientHeight);
     canvas.style.marginTop = '' + (0 - (height / 100) * 35) + 'px';
       
     //container.style.height = window.innerHeight + 'px'
-      */
       
     canvas.style.width = width + 'px'
     canvas.style.height = height + 'px'
@@ -9641,9 +9639,30 @@ function createCanvas (element, onDone, pixelRatio) {
     })
   }
 
+  function resize () {
+    var w = window.innerWidth
+    var h = window.innerHeight
+    if (element !== document.body) {
+      var bounds = element.getBoundingClientRect()
+      w = bounds.right - bounds.left
+      h = bounds.top - bounds.bottom
+    }
+    canvas.width = pixelRatio * w
+    canvas.height = pixelRatio * h
+    extend(canvas.style, {
+      width: w + 'px',
+      height: h + 'px'
+    })
+  }
 
+  window.addEventListener('resize', resize, false)
 
+  function onDestroy () {
+    window.removeEventListener('resize', resize)
+    element.removeChild(canvas)
+  }
 
+  resize()
 
   return {
     canvas: canvas,
@@ -10407,8 +10426,7 @@ const regl = require('regl')({
 //container.innerHTML = str
 //document.body.appendChild(container)
 
-//window.addEventListener('resize', fit(canvas), false)
-fit(canvas);
+window.addEventListener('resize', fit(canvas), false)
 
 const mat4 = require('gl-mat4')
 const noise2 = require('./noise.js')
