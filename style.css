@@ -93,10 +93,14 @@ html body canvas {
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
+#head {
+    display: block;
+    position: relative;
+}
 #introduction {
     display: block;
     position: relative;
-    margin: 0;
+    padding: 30px;
 }
 #gradient {
     display: block;
@@ -105,7 +109,7 @@ html body canvas {
     z-index: 999;
     overflow: hidden;
 }
-#gradient:before {
+#grid:before {
     content: "";
     display: block;
     position: absolute;
