@@ -85,7 +85,6 @@
     
     <style>
         body {
-          height: 10000px;
           margin: 0;
           padding: 0;
         }
@@ -264,14 +263,7 @@ function animate(delta) {
   render(delta);
 }
 
-let capturer = new CCapture( { 
-  verbose: true, 
-  framerate: 60,
-  // motionBlurFrames: 4,
-  quality: 90,
-  format: 'webm',
-  workersPath: 'js/'
- } );
+let capturer;
 let capturing = false;
 
 isCapturing = function(val) {
@@ -284,7 +276,7 @@ isCapturing = function(val) {
   capturing = val;
 }
 toggleCapture = function() {
-  isCapturing(!capturing);
+  //isCapturing(!capturing);
 }
 
 window.addEventListener('keyup', function(e) { if(e.keyCode == 68) toggleCapture(); });

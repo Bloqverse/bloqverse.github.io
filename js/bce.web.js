@@ -8,16 +8,10 @@ var bce_web = {
         var h = $('#meta').height();
         var w = window.innerHeight / 2;
         var d = (h - w) + 145;
-        var s = document.getElementById('grid').getBoundingClientRect();
         var g = $('#grid').height();
-        console.log('s', s);
-        console.log('g', g);
         $('#container').height(h + 150);
         $('#head').height(g + d);
         $('#grid').css({'top': d + 'px'});
-
-        console.log('h', h);
-        console.log('w', window.innerHeight);
     }
 };
 
