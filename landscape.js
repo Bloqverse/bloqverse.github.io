@@ -4,7 +4,7 @@ var size = require('element-size')
 module.exports = fit
 
 var container = document.getElementById('gradient')
-container.style.height = window.innerHeight + 'px'
+//container.style.height = window.innerHeight + 'px'
 
 var scratch = new Float32Array(2)
 
@@ -45,6 +45,12 @@ function fit(canvas, parent, scale) {
       canvas.width = width * resize.scale
       canvas.height = height * resize.scale
     }
+      
+    var head = document.getElementById('header');
+      console.log('head.height', head.clientHeight);
+    canvas.style.marginTop = '' + (0 - (height / 100) * 35) + 'px';
+      
+    //container.style.height = window.innerHeight + 'px'
       
     canvas.style.width = width + 'px'
     canvas.style.height = height + 'px'
