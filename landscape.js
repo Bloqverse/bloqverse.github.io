@@ -3,7 +3,8 @@ var size = require('element-size')
 
 module.exports = fit
 
-var container = document.getElementById('landscape')
+var container = document.getElementById('gradient')
+container.style.height = window.innerHeight + 'px'
 
 var scratch = new Float32Array(2)
 
@@ -11,13 +12,13 @@ function fit(canvas, parent, scale) {
     
   var isSVG = canvas.nodeName.toUpperCase() === 'SVG'
 
-  canvas.style.position = canvas.style.position || 'absolute'
-  canvas.style.top = '40%'
+  canvas.style.position = canvas.style.position || 'relative'
+  //canvas.style.top = '40%'
   canvas.style.left = 0
   canvas.style.backgroundColor = 'transparent'
 
   resize.scale  = parseFloat(scale || 1)
-  resize.parent = parent
+  resize.parent = window
 
   return resize()
 
@@ -44,13 +45,9 @@ function fit(canvas, parent, scale) {
       canvas.width = width * resize.scale
       canvas.height = height * resize.scale
     }
-
+      
     canvas.style.width = width + 'px'
     canvas.style.height = height + 'px'
-    
-    console.log('container', container);
-    console.log('window.innerHeight', window.innerHeight);
-    container.style.height = '' + ((window.innerHeight / 100) * 140) + 'px';
 
     return resize
   }
@@ -9623,7 +9620,10 @@ function createCanvas (element, onDone, pixelRatio) {
     left: 0,
     backgroundColor: 'transparent'
   })
-  element.appendChild(canvas)
+  
+  var gradient = document.getElementById('gradient');
+  console.log('gradient');
+  gradient.appendChild(canvas)
 
   if (element === document.body) {
     canvas.style.position = 'absolute'
@@ -10394,7 +10394,7 @@ module.exports = function(x,  y) {
 };
 
 },{}],95:[function(require,module,exports){
-const canvas = document.body.appendChild(document.createElement('canvas'))
+const canvas = document.getElementById('gradient').appendChild(document.createElement('canvas'))
 const fit = require('canvas-fit')
 
 /*
