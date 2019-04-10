@@ -10407,7 +10407,8 @@ const regl = require('regl')({
 //container.innerHTML = str
 //document.body.appendChild(container)
 
-window.addEventListener('resize', fit(canvas), false)
+//window.addEventListener('resize', fit(canvas), false)
+fit(canvas);
 
 const mat4 = require('gl-mat4')
 const noise2 = require('./noise.js')
