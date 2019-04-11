@@ -48,7 +48,6 @@ html body canvas {
 .intro {
     font-size: 1em;
     line-height: 1.4em;
-    padding: 0 15%;
     font-weight: normal;
 }
 .intro.caps {
