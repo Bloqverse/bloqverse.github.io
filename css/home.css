@@ -185,6 +185,9 @@ BOOTSRAP
     -moz-animation: flux 0.1s linear infinite;
     -webkit-animation: flux 0.1s linear infinite;
     -o-animation: flux 0.1s linear infinite;
+    border-bottom: 3px double #000;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 .electro span {
     font-family: 'Electrolize', sans-serif;
