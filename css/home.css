@@ -12,6 +12,10 @@ html body canvas {
 #gradient canvas {
     position: relative !important;
 }
+.logo {
+    max-width: 100%;
+    background-size: cover;
+}
 #header {
     width: 100%;
     height: 75%;
