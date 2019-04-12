@@ -186,6 +186,16 @@ BOOTSRAP
     -webkit-animation: flux 0.1s linear infinite;
     -o-animation: flux 0.1s linear infinite;
 }
+.electro span {
+    font-family: 'Electrolize', sans-serif;
+    color: #01d6d6;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px #000;
+    animation: flux 0.2s linear infinite;
+    -moz-animation: flux 0.2s linear infinite;
+    -webkit-animation: flux 0.2s linear infinite;
+    -o-animation: flux 0.2s linear infinite;
+}
 
 @keyframes flux {
   0%,
