@@ -16,6 +16,12 @@ html body canvas {
     max-width: 100%;
     background-size: cover;
 }
+#credits {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 30px 0;
+}
 #header {
     width: 100%;
     height: 75%;
