@@ -16,6 +16,18 @@ html body canvas {
     max-width: 100%;
     background-size: cover;
 }
+a.btn img.img-block,
+.img-block {
+    max-width: 100%;
+    padding: 3px;
+}
+.btn-img {
+    padding: 0;
+    opacity: 0.6;
+}
+.btn-img:hover {
+    opacity: 1;
+}
 #credits {
     display: block;
     position: relative;
