@@ -176,6 +176,49 @@ BOOTSRAP
     color: #FFF;
 }
 
+.electro {
+    font-family: 'Electrolize', sans-serif;
+    color: #01d6d6;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px #000;
+    animation: flux 0.1s linear infinite;
+    -moz-animation: flux 0.1s linear infinite;
+    -webkit-animation: flux 0.1s linear infinite;
+    -o-animation: flux 0.1s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #FFF;
+      opacity: 0.6;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #01d6d6;
+    opacity: 0.9;
+  }
+}
+
+.globe {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
+
 /*
 
 TO CLEAN UO
@@ -203,6 +246,7 @@ TO CLEAN UO
     width: 100%;
     height: 51%;
     overflow: hidden;
+    opacity: 0.75;
     touch-action: none;
     z-index: 99;
 }
