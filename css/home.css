@@ -383,7 +383,7 @@ TO CLEAN UO
     background-image: url(../img/galaxy-01.gif);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     opacity: 0.2;
 }
 
@@ -447,7 +447,7 @@ div.loading {
     padding: 0;
     margin: 0;
     background: url(../img/galaxy-01.gif) no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     opacity: 0.3;
 }
 
