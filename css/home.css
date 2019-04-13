@@ -380,7 +380,7 @@ TO CLEAN UO
     margin: 0;
     padding: 0;
     z-index: 9999;
-    background-image: url(../img/galaxy-01.gif);
+    background-image: url(../img/galaxy-01-low.gif);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 200% 200%;
@@ -401,7 +401,7 @@ div.loading {
   box-shadow: 0 2px 4px #000;
   position: relative;
   transform: scale(0.9);
-  transition: .1s;
+  transition: 0.1s;
   overflow: hidden;
 }
 
@@ -446,7 +446,7 @@ div.loading {
     height: 100%;
     padding: 0;
     margin: 0;
-    background: url(../img/galaxy-01.gif) no-repeat 50% 50%;
+    background: url(../img/galaxy-01-low.gif) no-repeat 50% 50%;
     background-size: 200% 200%;
     opacity: 0.3;
 }
