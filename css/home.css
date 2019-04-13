@@ -436,6 +436,21 @@ div.loading {
     100%{background-position:50% 0%}
 }
 
+#container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(../img/galaxy-01.gif) no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+}
+
 
 @media only screen and (max-width : 768px) {
     .row .col-md-6:first-child {
