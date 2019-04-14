@@ -5,6 +5,7 @@ html, body, html body {
     color: #FFF;
     text-align: center;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 .logo {
     max-width: 100%;
