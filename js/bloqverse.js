@@ -1,7 +1,18 @@
-var bce_web = {
+var bloqverse_web = {
     init: function()
     {
-        bce_web.realign();
+        bloqverse_web.realign();
+        bloqverse_web.music();
+    },
+    music: function()
+    {
+        var sound = new Howl({
+            src: ['bg.mp3', 'bg.wma', 'music.wav'],
+            autoplay: true,
+            loop: true,
+            volume: 0.5,
+        });
+        sound.play();
     },
     realign: function()
     {
@@ -17,9 +28,9 @@ var bce_web = {
 
 $(document).ready(function(e)
 {
-    bce_web.init();
+    bloqverse_web.init();
     $(window).resize(function(e)
     {
-        bce_web.realign();
+        bloqverse_web.realign();
     });
 });
